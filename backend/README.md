@@ -1,89 +1,147 @@
 # Backend API Project
 
-## Project Overview
+A RESTful Backend API developed using **Django** and **Django REST Framework**. This project provides user management functionality with CRUD operations, authentication, authorization, validation, API documentation, and SQLite database integration.
 
-This project is a Django REST Framework based Backend API with database integration.
+## 🚀 Technologies Used
 
-The project provides APIs for managing users and supports CRUD operations, validation, authentication, authorization, and database management.
+* Python 3.14.7
+* Django 6.1
+* Django REST Framework 3.18.0
+* drf-spectacular
+* SQLite3
+* Token Authentication
+* HTML, CSS, JavaScript (Frontend)
 
-## Technologies Used
-
-- Python
-- Django
-- Django REST Framework
-- SQLite Database
-- Django ORM
-- Token Authentication
-- drf-spectacular / Swagger
-
-## Database
-
-This project uses **SQLite** as its database.
-
-The database file is:
-
-`db.sqlite3`
-
-Django ORM is used to communicate with the database. The application stores and retrieves data through Django models and API operations.
-
-## CRUD Operations
-
-The API supports the following operations:
-
-- GET - Retrieve data
-- POST - Create new data
-- PUT - Update existing data
-- DELETE - Delete data
-
-## Authentication
-
-Token-based authentication is implemented using Django REST Framework.
-
-Authenticated users are required to access protected API endpoints.
-
-## Authorization
-
-Permissions are implemented to control access to protected API resources.
-
-## Data Validation
-
-Input data is validated through Django REST Framework serializers before being stored in the database.
-
-## Database Security
-
-Django ORM is used for database operations instead of directly constructing SQL queries.
-
-This helps protect the application against SQL Injection attacks by safely handling database queries and parameters.
-
-## Admin Panel
-
-Django Admin Panel is included for managing database records through an administrative interface.
-
-Admin credentials are not included in this repository for security reasons.
-
-## API Documentation
-
-API documentation is provided using Swagger/OpenAPI through drf-spectacular.
-
-## Project Structure
+## 📁 Project Structure
 
 ```text
-backend/
+Backend-API-Project/
 │
-├── db.sqlite3
-├── manage.py
-├── requirements.txt
-├── README.md
+├── backend/
+│   ├── manage.py
+│   ├── db.sqlite3
+│   ├── backend/
+│   └── users/
 │
-├──backend/
-│   ├── settings.py
-│   ├── urls.py
-│   └── ...
+├── frontend/
+│   ├── index.html
+│   ├── dashboard.html
+│   ├── css/
+│   │   ├── style.css
+│   │   └── dashboard.css
+│   └── js/
+│       └── dashboard.js
 │
-└── users/
-    ├── models.py
-    ├── serializers.py
-    ├── views.py
-    ├── urls.py
-    ├── admin.py
-    └── migrations/
+└── README.md
+```
+
+## ✨ Features
+
+* User CRUD operations
+* GET users
+* Create users using POST
+* Update users using PUT
+* Delete users using DELETE
+* Input validation
+* Token-based authentication
+* Permission-based authorization
+* Django Admin Panel
+* API documentation using Swagger/OpenAPI
+* SQLite database integration
+* Frontend interface for interacting with the backend API
+
+## 🔐 Authentication
+
+The API uses **Token Authentication** provided by Django REST Framework.
+
+Users must provide a valid authentication token to access protected API endpoints.
+
+## 📚 API Documentation
+
+API documentation is provided using **drf-spectacular** and Swagger UI.
+
+The Swagger documentation allows users to view and test the available API endpoints.
+
+## 🗄️ Database
+
+The project uses **SQLite3** as its database.
+
+The database file is included in the repository:
+
+```text
+backend/db.sqlite3
+```
+
+## ▶️ How to Run the Project
+
+### 1. Clone the Repository
+
+```bash
+git clone <YOUR-GITHUB-REPOSITORY-URL>
+```
+
+### 2. Open the Project Directory
+
+```bash
+cd Backend-API-Project
+```
+
+### 3. Create and Activate Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+Windows:
+
+```bash
+venv\Scripts\activate
+```
+
+### 4. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 5. Run Migrations
+
+```bash
+python manage.py migrate
+```
+
+### 6. Start the Django Server
+
+```bash
+python manage.py runserver
+```
+
+The backend will be available at:
+
+```text
+http://127.0.0.1:8000/
+```
+
+## 🧪 API Testing
+
+The API can be tested using tools such as:
+
+* Postman
+* Swagger UI
+* Browser for GET requests
+
+The project supports testing of authentication, CRUD operations, validation, and authorization.
+
+## 👨‍💻 Project Purpose
+
+The purpose of this project is to demonstrate practical knowledge of **Django REST Framework**, backend API development, database integration, authentication, authorization, validation, and frontend-backend integration.
+
+## 📌 Project Status
+
+**Completed**
+
+The project includes the required backend API functionality, database integration, authentication, authorization, frontend interface, API documentation, and testing.
+
+---
+
+**Developed as a Backend API Project using Django REST Framework.**
